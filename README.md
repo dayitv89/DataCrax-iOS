@@ -1,2 +1,2 @@
 # DataCrax-iOS
-Data Prdication iOS App
+Data Prediction iOS App

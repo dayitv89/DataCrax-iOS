@@ -89,10 +89,10 @@ typedef NS_ENUM(NSUInteger, PickerType) {
 
 - (IBAction)btnClearAllTapped:(id)sender {
     [self dismissKeyboard:nil];
-    requestPredictModel.brandName = nil;
-    requestPredictModel.modelName = nil;
-    requestPredictModel.modelYear = nil;
-    requestPredictModel.modelKms = nil;
+    textFieldBrandName.text = requestPredictModel.brandName = nil;
+    textFieldModelName.text = requestPredictModel.modelName = nil;
+    textFieldModelYear.text = requestPredictModel.modelYear = nil;
+    textFieldModelKms.text = requestPredictModel.modelKms = nil;
 }
 
 - (IBAction)btnPredictTapped:(id)sender {
@@ -170,12 +170,18 @@ typedef NS_ENUM(NSUInteger, PickerType) {
 
 - (IBAction)btnNextTapped:(id)sender {
     [self getPickerValue];
-    selectedIndex = selectedIndex == kModelYear ? kModelYear : selectedIndex+1;
+    if (selectedIndex == kModelYear) {
+        [textFieldModelKms becomeFirstResponder];
+        selectedIndex = kNone;
+    } else {
+        selectedIndex++;
+    }
+    [self managePickers];
 }
 
 - (IBAction)btnDoneTapped:(id)sender {
     [self getPickerValue];
-    pickerView.hidden = YES;
+    [self btnNextTapped:nil];
 }
 
 - (void)managePickers {
@@ -198,6 +204,7 @@ typedef NS_ENUM(NSUInteger, PickerType) {
         case kModelName:
         case kModelYear:
             pickerView.hidden = NO;
+            [self dismissKeyboard:nil];
             [picker reloadAllComponents];
             break;
         case kNone:
@@ -215,6 +222,7 @@ typedef NS_ENUM(NSUInteger, PickerType) {
         case kBrandName:
             requestPredictModel.brandName = pickerData[[picker selectedRowInComponent:0]];
             textFieldBrandName.text = requestPredictModel.brandName;
+            textFieldModelName.text = requestPredictModel.modelName = nil;
             break;
         case kModelName:
             requestPredictModel.modelName = pickerData[[picker selectedRowInComponent:0]];
