@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="V3m-pW-Aeb" customClass="TPKeyboardAvoidingScrollView">
+                                <rect key="frame" x="0.0" y="45" width="320" height="308"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Brand Name" textAlignment="natural" minimumFontSize="17" id="vWL-dY-a02" customClass="JVFloatLabeledTextField">
+                                        <rect key="frame" x="24" y="20" width="272" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="C7p-3K-TnR"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Model Name" textAlignment="natural" minimumFontSize="17" id="F6g-ws-uUP" customClass="JVFloatLabeledTextField">
+                                        <rect key="frame" x="24" y="77" width="272" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Zza-jD-jal"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Model Purchased Year" textAlignment="natural" minimumFontSize="17" id="dFx-pn-SJR" customClass="JVFloatLabeledTextField">
+                                        <rect key="frame" x="24" y="128" width="272" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="t6e-pB-yqh"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bike Running (Kms)" textAlignment="natural" minimumFontSize="17" id="wtn-G2-L3c" customClass="JVFloatLabeledTextField">
+                                        <rect key="frame" x="24" y="186" width="272" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Xc8-dU-HBV"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BhN-zo-LU6">
+                                        <rect key="frame" x="24" y="242" width="117" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.78649829407000138" green="1" blue="0.39330098665171187" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Predict">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnPredictTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oME-q5-Pta"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="a9O-fl-AaZ">
+                                        <rect key="frame" x="179" y="242" width="117" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.63693907558815399" blue="0.39480498700695177" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Clear All">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnClearAllTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cuB-8Q-Fx7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DataCrax.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4g3-tk-ppb">
+                                <rect key="frame" x="71" y="20" width="177" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" contentMode="scaleToFill" id="Gb9-7E-1z4">
+                                <rect key="frame" x="0.0" y="308" width="320" height="260"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" id="8fx-jt-hY1">
+                                        <rect key="frame" x="0.0" y="44" width="319" height="216"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="91U-rb-ZsB"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="1Cq-wx-mfk"/>
+                                        </connections>
+                                    </pickerView>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3r2-gC-53l">
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <items>
+                                            <barButtonItem title="  &lt;  " id="THi-61-Kqp">
+                                                <connections>
+                                                    <action selector="btnPreTapped:" destination="BYZ-38-t0r" id="ZkK-33-iit"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="  &gt;  " id="Uiu-Zm-OTt">
+                                                <connections>
+                                                    <action selector="btnNextTapped:" destination="BYZ-38-t0r" id="cFL-io-Zmo"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="SGk-HM-9qt"/>
+                                            <barButtonItem title="Done" id="fvr-X8-1Gi">
+                                                <connections>
+                                                    <action selector="btnDoneTapped:" destination="BYZ-38-t0r" id="q47-kw-Hni"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="P6I-gj-Nvr" appends="YES" id="EeM-mx-dSu"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="btnClearAll" destination="a9O-fl-AaZ" id="cBz-zt-gus"/>
+                        <outlet property="btnPredict" destination="BhN-zo-LU6" id="sxo-K0-gz7"/>
+                        <outlet property="picker" destination="8fx-jt-hY1" id="6LX-zM-9UY"/>
+                        <outlet property="pickerView" destination="Gb9-7E-1z4" id="DGH-FL-T4R"/>
+                        <outlet property="textFieldBrandName" destination="vWL-dY-a02" id="fqX-bm-m09"/>
+                        <outlet property="textFieldModelKms" destination="wtn-G2-L3c" id="6cC-V4-axW"/>
+                        <outlet property="textFieldModelName" destination="F6g-ws-uUP" id="hPA-0B-OjT"/>
+                        <outlet property="textFieldModelYear" destination="dFx-pn-SJR" id="Y7p-M9-3Bi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="P6I-gj-Nvr">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="vET-SB-7kP"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="162" y="406"/>
+        </scene>
+    </scenes>
+</document>
