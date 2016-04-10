@@ -1,2 +1,2 @@
-# DataCrax-iOS <img src="imgs/Icon.png" alt="Icon" style="width: 100px;"/>
+# DataCrax-iOS ![](./imgs/Icon100.png)
 Data Prediction iOS App
